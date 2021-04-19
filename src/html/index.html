@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../../dist/tailwind.css" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+  <!-- ... -->
+</head>
+
+<body class="min-h-screen bg-white-100">
+  <div class="relative overflow-hidden bg-white">
+    <div class="mx-auto max-w-7xl">
+      <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+        <svg class="absolute inset-y-0 right-0 hidden w-48 h-full text-white transform translate-x-1/2 lg:block"
+          fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <polygon points="50,0 100,0 50,100 0,100" />
+        </svg>
+
+        <div class="relative px-4 pt-6 sm:px-6 lg:px-8">
+          <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+            <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+              <div class="flex items-center justify-between w-full md:w-auto">
+                <a href="#">
+                  <span class="sr-only">Workflow</span>
+                  <img class="w-auto h-8 sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg">
+                </a>
+              </div>
+            </div>
+            <div class="items-end hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">首页</a>
+
+              <a href="https://forum.jimoos.cn" class="font-medium text-gray-500 hover:text-gray-900">开发者社区</a>
+
+              <a href="https://jimoos-cn.github.io/jimoos-shop-server/"
+                class="font-medium text-gray-500 hover:text-gray-900">文档</a>
+
+              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">成员列表</a>
+              <!-- 
+              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">
+                <div class="inline-flex items-end justify-center sm:w-auto">
+                  <svg width="24" height="24" fill="currentColor" class="mr-3 text-gray-500 text-opacity-50 transform">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z">
+                    </path>
+                  </svg><span>Star</span>
+                </div>
+              </a> -->
+            </div>
+          </nav>
+        </div>
+
+        <!--
+          Mobile menu, show/hide based on menu open state.
+  
+          Entering: "duration-150 ease-out"
+            From: "opacity-0 scale-95"
+            To: "opacity-100 scale-100"
+          Leaving: "duration-100 ease-in"
+            From: "opacity-100 scale-100"
+            To: "opacity-0 scale-95"
+        -->
+        <!-- <div class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden">
+          <div class="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
+            <div class="flex items-center justify-between px-5 pt-4">
+              <div>
+                <img class="w-auto h-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+              </div>
+              <div class="-mr-2">
+                <button type="button"
+                  class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <span class="sr-only">Close main menu</span>
+                  <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="px-2 pt-2 pb-3 space-y-1">
+              <a href="#"
+                class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50">Product</a>
+
+              <a href="#"
+                class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50">Features</a>
+
+              <a href="#"
+                class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
+
+              <a href="#"
+                class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50">Company</a>
+            </div>
+            <a href="#"
+              class="block w-full px-5 py-3 font-medium text-center text-indigo-600 bg-gray-50 hover:bg-gray-100">
+              Log in
+            </a>
+          </div>
+        </div> -->
+
+        <main class="px-4 mx-auto mt-10 max-w-7xl sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+          <div class="sm:text-center lg:text-left">
+            <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+              <span class="block xl:inline">积墨开源商城</span>
+              <!-- <span class="block text-3xl text-indigo-600 xl:inline"></span> -->
+            </h1>
+            <p
+              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              拥抱开源，普惠好用。<br>易于二次开发的商业友好的免费开源商城
+            </p>
+            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div class="rounded-md shadow">
+                <a href="https://github.com/jimoos-cn/jimoos-shop-server"
+                  class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                  Github Fork
+                </a>
+              </div>
+              <div class="mt-3 sm:mt-0 sm:ml-3">
+                <a href="https://gitee.com/jimoos/jimoos-shop-server"
+                  class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-indigo-700 border border-transparent rounded-md bg-indigo-50 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                  Gitee Fork
+                </a>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <img class="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
+        src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+        alt="">
+    </div>
+  </div>
+  <div class="p-3 bg-white"></div>
+  <div class="py-12 bg-indigo-50">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+          特征
+        </p>
+        <p class="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto">
+          免费开源、商业授权友好、易于二次开发、可拓展模块设计
+        </p>
+      </div>
+
+      <div class="mt-10">
+        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                <!-- Heroicon name: outline/globe-alt -->
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">免费开源</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">
+              遵守<a class="font-bold" href="https://www.gnu.org/licenses/lgpl-3.0.en.html">LGPLv3</a>协议，完全免费使用。
+            </dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                <!-- Heroicon name: outline/scale -->
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">商业授权友好</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">
+              只是商业使用，不需要授权付费。只有在基于源码进行二次开发的时候才需要进行授权付费。
+            </dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">良好的文档和开发社区</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">
+              拥有良好的文档和开发社区，从构建、打包、部署等提供完整的文档。
+            </dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                <!-- Heroicon name: outline/annotation -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">可拓展模块设计</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">
+              可以基于<b>jimoos4j-cli</b>进行二次插件开发，基于Event和 SPI 机制进行项目拓展。
+            </dd>
+          </div>
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">专注核心功能</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">
+              提供从商品管理，用户管理，订单模块出发，设计弹性的营销模块拓展支持。
+            </dd>
+          </div>
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                <!-- Heroicon name: outline/annotation -->
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">更多服务支持</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">
+              更多服务支持，待完善。
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div class="py-12 bg-white">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <!-- <h2 class="text-base font-semibold tracking-wide text-indigo-600 uppercase">Transactions</h2> -->
+        <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+          团队开源项目
+        </p>
+        <!-- <p class="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto">
+        </p> -->
+      </div>
+      <div class="mt-10">
+        <div class="grid grid-cols-3 gap-4 text-center bg-white-100 place-items-center">
+          <a class="flex flex-col justify-center p-3" href="https://github.com/jimoos-cn/jimoos-shop-server">
+            <div class="flex justify-center mb-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+              </svg>
+            </div>
+            <h1 class="text-2xl text-gray-700">积墨开源商城</h1>
+            <h3 class="text-xl text-gray-700">jimoos-shop-server</h3>
+            <div class="pt-1 text-base text-gray-500">实现商业友好，易于二次开发，商用级别的免费开源商城。</div>
+          </a>
+          <a class="flex flex-col justify-center p-3" href="https://github.com/jimoos-cn/jimoos-api-tracer">
+            <div class="flex justify-center mb-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+              </svg>
+            </div>
+            <h1 class="text-2xl text-gray-700">积墨接口跟踪器</h1>
+            <div class="text-xl text-gray-700">jimoos-api-tracer</div>
+            <div class="pt-1 text-base text-gray-500">五分钟实现API</div>
+          </a>
+          <a class="flex flex-col justify-center p-3" href="https://github.com/jimoos-cn/jimoos4j-cli">
+            <div class="flex justify-center mb-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h1 class="text-2xl text-gray-700">积墨命令行工具</h1>
+            <h3 class="text-xl text-gray-700">jimoos4j-cli</h3>
+            <div class="pt-1 text-base text-gray-500"> 快速启动一个积墨开源商城兼容的插件项目。</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-12 bg-indigo-50">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <!-- <h2 class="text-base font-semibold tracking-wide text-indigo-600 uppercase">Transactions</h2> -->
+        <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+          更多
+        </p>
+      </div>
+      <div class="mt-10">
+        <div class="grid grid-cols-2 gap-8 space-y-1">
+          <div class="pt-5 pb-10 pl-5 bg-white border-l-8 border-indigo-600 border-solid">
+            <div class="flex content-center justify-start mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <a class="place-self-center" href="https://www.xiaohuodui.cn/?utm_source=web&utm_medium=jimoos.cn">
+                <h1 class="text-4xl tracking-tight text-gray-900 place-self-center">关注我们B站频道</h1>
+              </a>
+            </div>
+            <div class="text-base text-gray-500">每周积墨开源B 站频道会更新开源 vlog,分享技术干活。欢迎小火伴去B 站关注"积墨开源"。</div>
+          </div>
+          <div class="pt-5 pb-10 pl-5 bg-white border-l-8 border-indigo-600 border-solid">
+            <div class="flex content-center justify-start mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <a class="place-self-center" href="https://www.xiaohuodui.cn/?utm_source=web&utm_medium=jimoos.cn">
+                <h1 class="text-4xl tracking-tight text-gray-900 place-self-center">赞助商-小火堆科技</h1>
+              </a>
+            </div>
+            <div class="text-base text-gray-500">杭州小火堆科技是一家在杭发展6年的专业技术服务公司。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-12 bg-indigo-50">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 ">
+      <div class="pt-5 text-center">
+        <p class="text-base text-gray-600">©Copyright 2021 积墨开源项目组. 版权所有</p>
+        <p><a class="text-base text-gray-500" href="https://beian.miit.gov.cn">浙ICP备16001033号-3</a></p>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
