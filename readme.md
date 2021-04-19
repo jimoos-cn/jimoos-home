@@ -15,7 +15,7 @@
 
 执行 `css` 打包命令。
 
-`NODE_ENV=production npx tailwindcss-cli@latest build ./src/css/tailwind.css -o ./dist/tailwind.css`
+`NODE_ENV=production npx tailwindcss-cli@latest build ./src/css/tailwind.css -o ./src/css/t-tailwind.css`
 ## 开源协议
 
 MIT.
